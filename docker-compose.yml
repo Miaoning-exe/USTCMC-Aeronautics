@@ -1,0 +1,45 @@
+services:
+  # --- 网关节点 (Velocity) ---
+  velocity:
+    image: itzg/mc-proxy
+    container_name: mc-velocity
+    ports:
+      - "25565:25565"
+    environment:
+      TYPE: VELOCITY
+      MEMORY: 1G
+    volumes:
+      - ./velocity:/server
+    restart: unless-stopped
+
+  # --- 生存服节点 (Survival) ---
+  survival:
+    image: itzg/minecraft-server
+    container_name: mc-survival
+    environment:
+      EULA: "TRUE"
+      TYPE: NEOFORGE             
+      VERSION: "1.21.1" 
+      NEOFORGE_VERSION: "21.1.226" 
+      MEMORY: 4G 
+      ONLINE_MODE: "FALSE" 
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"  # 每次重启都覆盖 server.properties 文件
+    volumes:
+      - ./survival:/data
+    restart: unless-stopped
+
+  # --- 创造服节点 (Creative) ---
+  creative:
+    image: itzg/minecraft-server
+    container_name: mc-creative
+    environment:
+      EULA: "TRUE"
+      TYPE: NEOFORGE
+      VERSION: "1.21.1"
+      NEOFORGE_VERSION: "21.1.226"
+      MEMORY: 4G
+      ONLINE_MODE: "FALSE"
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"  # 每次重启都覆盖 server.properties 文件
+    volumes:
+      - ./creative:/data
+    restart: unless-stopped
