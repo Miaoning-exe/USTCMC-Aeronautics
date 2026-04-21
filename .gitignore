@@ -7,5 +7,5 @@ survival/*
 velocity/*
 !velocity/forwarding.secret
 !velocity/velocity.toml
-
+mods.tar.gz
 
