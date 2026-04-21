@@ -32,7 +32,7 @@ services:
       ALLOW_FLIGHT: "TRUE"
       DIFFICULTY: "HARD"
       MAX_PLAYERS: 1958
-      MOTD: "USTCMC Aeronautics!"
+      MOTD: "USTC Aeronautics!"
       RCON_PASSWORD: "114514"
       SPAWN_PROTECTION: 0
       SERVER_PORT: 25566
@@ -64,7 +64,7 @@ services:
       DIFFICULTY: "HARD"
       MODE: "creative"
       MAX_PLAYERS: 1958
-      MOTD: "USTCMC Aeronautics Creative!"
+      MOTD: "USTC Aeronautics Creative!"
       RCON_PASSWORD: "114514"
       SPAWN_PROTECTION: 0
       SERVER_PORT: 25567
