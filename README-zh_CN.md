@@ -63,7 +63,7 @@ sudo chown -R $USER:$USER Aeronautics_network_server
 cd Aeronautics_network_server
 ```
 
-将本仓库克隆到服务器的根目录
+将本仓库克隆到项目目录
 
 ```bash
 git clone https://github.com/Miaoning-exe/USTCMC-Aeronautics.git
@@ -72,7 +72,7 @@ git clone https://github.com/Miaoning-exe/USTCMC-Aeronautics.git
 ### 3. 执行自动化部署脚本
 本项目的大体积二进制文件（比如 mods）已托管至社团官网 CDN。我们提供了一键部署脚本 deploy.sh，它会自动完成最新配置和模组包的同步、解压及容器启动。
 
-转到项目根目录
+转到服务器根目录
 ```bash
 cd USTCMC-Aeronautics/
 ```

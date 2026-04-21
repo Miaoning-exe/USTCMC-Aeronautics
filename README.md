@@ -63,7 +63,7 @@ sudo chown -R $USER:$USER Aeronautics_network_server
 cd Aeronautics_network_server
 ```
 
-Clone this repository to the server's root directory
+Clone this repository to the project directory
 
 ```bash
 git clone https://github.com/Miaoning-exe/USTCMC-Aeronautics.git
@@ -73,7 +73,7 @@ git clone https://github.com/Miaoning-exe/USTCMC-Aeronautics.git
 
 The large binary files (such as mods) for this project are hosted on the club's official CDN. We provide a one-click deployment script deploy.sh, which automatically synchronizes, extracts the latest configuration and modpacks, and starts the containers.
 
-Navigate to the project root directory
+Navigate to the server's root directory
 ```bash
 cd USTCMC-Aeronautics/
 ```
