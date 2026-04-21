@@ -4,7 +4,7 @@ services:
     image: itzg/mc-proxy
     container_name: mc-velocity
     ports:
-      - "25565:25565"
+      - "25578:25565" # 将前面的端口号改成你的服务器实际开放的端口号
     environment:
       TYPE: VELOCITY
       MEMORY: 1G
