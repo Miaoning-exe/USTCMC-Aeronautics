@@ -69,7 +69,6 @@ git clone https://github.com/Miaoning-exe/USTCMC-Aeronautics.git
 ### 3. 执行自动化部署脚本
 本项目的大体积二进制文件（比如 mods）已托管至社团官网 CDN。我们提供了一键部署脚本 deploy.sh，它会自动完成最新配置和模组包的同步、解压及容器启动。
 
-
 赋予脚本执行权限
 ```bash
 chmod +x deploy.sh
@@ -80,7 +79,12 @@ chmod +x deploy.sh
 ./deploy.sh
 ```
 
-脚本执行成功后，所有容器将在后台自动拉起。首次启动可能需要 3-5 分钟进行加载和初始化，这是正常的。
+启动容器
+```bash
+docker-compose up -d --remove-orphans
+```
+
+首次启动可能需要 3-5 分钟进行加载和初始化，这是正常的。
 
 ### 4. 防火墙设置
 为了让玩家能够正常连接，如果你使用的是云服务器，请确保服务器所在的云服务商控制台放行了以下端口：
