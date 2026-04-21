@@ -1,8 +1,4 @@
 .vscode/
-logs/
-world/
-mods/
-cache/
 creative/*
 survival/*
 !creative/config/
