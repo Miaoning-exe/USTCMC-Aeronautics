@@ -90,7 +90,7 @@ Execute
 
 Start containers
 ```bash
-docker compose up -d --remove-orphans
+sudo docker compose up -d --remove-orphans
 ```
 
 The first startup may take 3-5 minutes for loading and initialization, which is normal.

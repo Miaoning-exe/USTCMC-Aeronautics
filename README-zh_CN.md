@@ -89,7 +89,7 @@ chmod +x deploy.sh
 
 启动容器
 ```bash
-docker compose up -d --remove-orphans
+sudo docker compose up -d --remove-orphans
 ```
 
 首次启动可能需要 3-5 分钟进行加载和初始化，这是正常的。
