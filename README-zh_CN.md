@@ -12,12 +12,14 @@
 
 更新系统软件包
 ```bash
-sudo yum update
+sudo apt-get update     # Ubuntu
+sudo yum update         # CentOS
 ```
 
 安装 Git, Curl 等基础工具
 ```bash
-sudo yum install -y git curl wget
+sudo apt-get install -y git curl wget   # Ubuntu
+sudo yum install -y git curl wget       # CentOS
 ```
 
 使用官方一键脚本安装 Docker
@@ -34,7 +36,8 @@ systemctl enable docker
 
 安装 Docker Compose 插件
 ```bash
-sudo yum install -y docker-compose-plugin
+sudo apt-get install -y docker-compose-plugin   # Ubuntu
+sudo yum install -y docker-compose-plugin       # CentOS
 ```
 
 验证安装成功
@@ -55,9 +58,9 @@ sudo usermod -aG docker $USER
 创建并转到项目目录
 
 ```bash
-sudo mkdir -p /opt/Aeronautics_network_server
-sudo chown -R $USER:$USER /opt/Aeronautics_network_server
-cd /opt/Aeronautics_network_server
+sudo mkdir Aeronautics_network_server
+sudo chown -R $USER:$USER Aeronautics_network_server
+cd Aeronautics_network_server
 ```
 
 将本仓库克隆到服务器的根目录
@@ -68,6 +71,11 @@ git clone https://github.com/Miaoning-exe/USTCMC-Aeronautics.git
 
 ### 3. 执行自动化部署脚本
 本项目的大体积二进制文件（比如 mods）已托管至社团官网 CDN。我们提供了一键部署脚本 deploy.sh，它会自动完成最新配置和模组包的同步、解压及容器启动。
+
+转到项目根目录
+```bash
+cd USTCMC-Aeronautics/
+```
 
 赋予脚本执行权限
 ```bash
@@ -81,7 +89,7 @@ chmod +x deploy.sh
 
 启动容器
 ```bash
-docker-compose up -d --remove-orphans
+docker compose up -d --remove-orphans
 ```
 
 首次启动可能需要 3-5 分钟进行加载和初始化，这是正常的。
