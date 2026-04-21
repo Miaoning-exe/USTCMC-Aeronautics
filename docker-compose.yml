@@ -21,7 +21,7 @@ services:
       TYPE: NEOFORGE             
       VERSION: "1.21.1" 
       NEOFORGE_VERSION: "21.1.226" 
-      MEMORY: 4G 
+      MEMORY: 6G 
       ONLINE_MODE: "FALSE" 
       OVERRIDE_SERVER_PROPERTIES: "TRUE"  # 每次重启都覆盖 server.properties 文件
 
@@ -52,7 +52,7 @@ services:
       TYPE: NEOFORGE
       VERSION: "1.21.1"
       NEOFORGE_VERSION: "21.1.226"
-      MEMORY: 4G
+      MEMORY: 6G
       ONLINE_MODE: "FALSE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"  # 每次重启都覆盖 server.properties 文件
 
