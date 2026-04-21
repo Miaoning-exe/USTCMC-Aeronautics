@@ -35,6 +35,7 @@ services:
       MOTD: "Aerinautics!!!"
       RCON_PASSWORD: "114514"
       SPAWN_PROTECTION: 0
+      SERVER_PORT: 25566
 
       # icon
       ICON: ""
@@ -66,6 +67,7 @@ services:
       MOTD: "Aerinautics Creative!!!"
       RCON_PASSWORD: "114514"
       SPAWN_PROTECTION: 0
+      SERVER_PORT: 25567
 
       # world
       LEVEL_TYPE: "minecraft:flat"

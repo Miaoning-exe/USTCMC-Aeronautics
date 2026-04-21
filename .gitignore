@@ -1,6 +1,15 @@
 .vscode/
 logs/
 world/
-creative/
-survival/
 mods/
+cache/
+creative/*
+survival/*
+!creative/config/
+!survival/config/
+!*.properties
+velocity/*
+!velocity/forwarding.secret
+!velocity/velocity.toml
+
+

@@ -2,18 +2,18 @@
 config-version = "2.7"
 
 # What port should the proxy be bound to? By default, we'll bind to all addresses on port 25577.
-bind = "0.0.0.0:25577"
+bind = "0.0.0.0:25565"
 
 # What should be the MOTD? This gets displayed when the player adds your server to
 # their server list. Only MiniMessage format is accepted.
-motd = "<#09add3>A Velocity Server"
+motd = "Aeronautics!!!"
 
 # What should we display for the maximum number of players? (Velocity does not support a cap
 # on the number of players online.)
 show-max-players = 500
 
 # Should we authenticate players with Mojang? By default, this is on.
-online-mode = true
+online-mode = false
 
 # Should the proxy enforce the new public key security standard? By default, this is on.
 force-key-authentication = true
@@ -34,7 +34,7 @@ prevent-client-proxy-connections = false
 #                  unable to implement network level firewalling (on a shared host).
 # - "modern":      Forward player IPs and UUIDs as part of the login process using
 #                  Velocity's native forwarding. Only applicable for Minecraft 1.13 or higher.
-player-info-forwarding-mode = "NONE"
+player-info-forwarding-mode = "modern"
 
 # If you are using modern or BungeeGuard IP forwarding, configure a file that contains a unique secret here.
 # The file is expected to be UTF-8 encoded and not empty.
@@ -72,26 +72,16 @@ enable-player-address-logging = true
 [servers]
 # Configure your servers here. Each key represents the server's name, and the value
 # represents the IP address of the server to connect to.
-lobby = "127.0.0.1:30066"
-factions = "127.0.0.1:30067"
-minigames = "127.0.0.1:30068"
+# IP地址要写成 docker 容器名称 + 端口号. 端口号应与 docker-compose.yml 中的 SERVER_PORT 保持一致.
+survival = "mc-survival:25566"
+creative = "mc-creative:25567"
 
 # In what order we should try servers when a player logs in or is kicked from a server.
-try = [
-    "lobby"
-]
+try = ["survival"]
 
 [forced-hosts]
 # Configure your forced hosts here.
-"lobby.example.com" = [
-    "lobby"
-]
-"factions.example.com" = [
-    "factions"
-]
-"minigames.example.com" = [
-    "minigames"
-]
+
 
 [advanced]
 # How large a Minecraft packet has to be before we compress it. Setting this to zero will
