@@ -24,6 +24,7 @@ services:
       MEMORY: 6G 
       ONLINE_MODE: "FALSE" 
       OVERRIDE_SERVER_PROPERTIES: "TRUE"  # 每次重启都覆盖 server.properties 文件
+      CREATE_CONSOLE_IN_PIPE: "true"
 
       # OP
       OPS: ""
@@ -55,6 +56,7 @@ services:
       MEMORY: 6G
       ONLINE_MODE: "FALSE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"  # 每次重启都覆盖 server.properties 文件
+      CREATE_CONSOLE_IN_PIPE: "true"
 
       # OP
       OPS: ""

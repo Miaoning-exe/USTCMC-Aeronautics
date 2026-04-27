@@ -109,6 +109,11 @@ Docker ignores the UFW firewall by default. Therefore, for MC servers deployed w
 
 After deployment, you can use the following commands to monitor the server status:
 
+Start containers
+```bash
+docker compose up -d 
+```
+
 View all running MC containers
 ```bash
 docker ps | grep mc-
